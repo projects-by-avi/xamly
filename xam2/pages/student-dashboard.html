@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xamly - Student Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+    </ul>
+  </nav>
+  <div class="main">
+    <h1>Student Dashboard</h1>
+    <h3>Available Exams</h3>
+    <div id="exam-list"></div>
+    <input type="file" id="import-exams" accept=".json" style="display: none;" onchange="importExams(event)">
+    <button onclick="document.getElementById('import-exams').click()">Import Exams</button>
+    <button onclick="exportSubmissions()">Export Submissions</button>
+    <button onclick="window.location.href='view-results.html'">View Results</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/student.js"></script>
+</body>
+</html>
